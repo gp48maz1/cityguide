@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Commodore Guide</string>
+
+    <!-- 1st Filters -->
+    <string name="fresh">Freshman</string>
+    <string name="pre21">Sophmore and Junior</string>
+    <string name="post21">Senior</string>
+
+
+    <!-- 2nd Filters -->
+    <string name="housing">Housing</string>
+    <string name="food">Food</string>
+    <string name="ent">Entertainment</string>
+    <string name="drinks">Drinks</string>
+
+    <!-- House Titles -->
+    <string name="t_wm_college">Warren Moore College</string>
+    <string name="t_alumni">Alumni Lawn</string>
+    <string name="t_towers_12">Carmichael Towers East</string>
+    <string name="t_towers_34">Carmichael Towers West</string>
+    <string name="t_branscomb">Branscomb</string>
+    <string name="t_chaffin">Chaffin</string>
+    <string name="t_mayfield">Mayfield</string>
+    <string name="t_ml">Morgan and Lewis</string>
+    <string name="t_crawford">Crawford</string>
+    <string name="t_east">East House</string>
+    <string name="t_hank">Hank Ingram House</string>
+    <string name="t_gillette">Gillette House</string>
+    <string name="t_memorial">Memorial House</string>
+    <string name="t_murray">Murray House</string>
+    <string name="t_north">North House</string>
+    <string name="t_stam">Stambaugh House</string>
+    <string name="t_suther">Sutherland House</string>
+    <string name="t_west">West House</string>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.andriod.cityguide.MainActivity">
+
+    <TextView
+        android:id="@+id/housing"
+        style="@style/CategoryStyle"
+        android:background="@android:color/black"
+        android:text="@string/housing" />
+
+    <TextView
+        android:id="@+id/food"
+        style="@style/CategoryStyle"
+        android:background="@android:color/holo_blue_bright"
+        android:text="@string/food" />
+
+    <TextView
+        android:id="@+id/ent"
+        style="@style/CategoryStyle"
+        android:background="@android:color/holo_red_dark"
+        android:text="@string/ent" />
+
+    <TextView
+        android:id="@+id/drinks"
+        style="@style/CategoryStyle"
+        android:background="@android:color/darker_gray"
+        android:text="@string/drinks" />
+
+</LinearLayout>
