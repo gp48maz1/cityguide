@@ -16,7 +16,7 @@ public class HousingActivity extends AppCompatActivity {
 
             ArrayList<Place> places = new ArrayList<>();
 
-            places.add(new Place("Crawford", "peabody", true, false, false, false, 4.0f));
+            places.add(new Place("Crawford", "peabody", true, true, true, true, 4.0f));
             places.add(new Place("East", "peabody", true, false, false, false, 2.0f));
             places.add(new Place("West", "peabody", true, false, false, false, 1.5f));
             places.add(new Place("North", "peabody", true, false, false, false, 2.5f));

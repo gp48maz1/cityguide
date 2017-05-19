@@ -54,13 +54,37 @@ public class PlaceAdapter extends ArrayAdapter<Place>{
         tvName.setText(place.getName());
         tvRegion.setText(place.getRegion());
 
-        //Figure out what to do with these tags -- cause not just returning true false...
-        //tvFresh.setText(place.);
-        //tvSoph.setText(place.getName());
-        //tvJr.setText(place.getName());
-        //tvSr.setText(place.getName());
+        //If the Tags are there for a given year they display if not they are gone
+        if (place.isFreshman()){
+            tvFresh.setVisibility(View.VISIBLE);
+            tvFresh.setText("Freshman");
+        } else {
+            tvFresh.setVisibility(View.GONE);
+        }
 
-        //Also should have set onClick Listners up first
+        if (place.isSophomore()){
+            tvSoph.setVisibility(View.VISIBLE);
+            tvSoph.setText("Sophomore");
+        } else {
+            tvSoph.setVisibility(View.GONE);
+        }
+
+        if (place.isJunior()){
+            tvJr.setVisibility(View.VISIBLE);
+            tvJr.setText("Junior");
+        } else {
+            tvJr.setVisibility(View.GONE);
+        }
+
+        if (place.isSenior()){
+            tvSr.setVisibility(View.VISIBLE);
+            tvSr.setText("Senior");
+        } else {
+            tvSr.setVisibility(View.GONE);
+        }
+
+        //Now I am hooking up the star rating
+        rating.setRating(place.getRating());
 
         return listItemView;
     }
