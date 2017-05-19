@@ -18,6 +18,9 @@ public class Place {
     private boolean mJr;
     private boolean mSr;
     private float mRating;
+    private int mImageRef = NO_IMAGE;
+
+    private static final int NO_IMAGE = -1;
 
     //HAVE TO ADD IN IMAGE
 
@@ -40,6 +43,29 @@ public class Place {
         this.mSr = senior;
         //NEED TO PUT PARAMETERS ON RATING 1-5
         this.mRating = rating;
+    }
+
+    /**
+     * Constructor
+     */
+    public Place(String name, String region, boolean fresh, boolean soph, boolean junior, boolean senior, float rating, int imageRef){
+
+        this.mName = name;
+
+        if (Arrays.asList(regions).contains(region.trim().toLowerCase())){
+            this.mRegion = region;
+        } else {
+            throw new IllegalArgumentException("Invalid Region: " +region+ ". Must be an actual region");
+        }
+
+        this.mFresh = fresh;
+        this.mSoph = soph;
+        this.mJr = junior;
+        this.mSr = senior;
+        //NEED TO PUT PARAMETERS ON RATING 1-5
+        this.mRating = rating;
+
+        this.mImageRef = imageRef;
     }
 
 
@@ -108,5 +134,13 @@ public class Place {
 
     public float getRating(){
         return mRating;
+    }
+
+    public boolean isImage(){
+        if (mImageRef == NO_IMAGE) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
