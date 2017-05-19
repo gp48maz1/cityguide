@@ -3,10 +3,12 @@ package com.example.andriod.cityguide;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -18,8 +20,11 @@ import java.util.ArrayList;
 
 public class PlaceAdapter extends ArrayAdapter<Place>{
 
-    public PlaceAdapter(Context context, ArrayList<Place> places){
+    private int mColorID;
+
+    public PlaceAdapter(Context context, ArrayList<Place> places, int colorID){
         super(context, 0, places);
+        mColorID = colorID;
     }
 
     @NonNull
@@ -44,7 +49,13 @@ public class PlaceAdapter extends ArrayAdapter<Place>{
         TextView tvSoph = (TextView) listItemView.findViewById(R.id.sophomore_tag);
         TextView tvJr = (TextView) listItemView.findViewById(R.id.junior_tag);
         TextView tvSr = (TextView) listItemView.findViewById(R.id.senior_tag);
+
         RatingBar rating = (RatingBar) listItemView.findViewById(R.id.ratingBar);
+
+        ImageView ivImage = (ImageView) listItemView.findViewById(R.id.image);
+
+        View vBackground = listItemView.findViewById(R.id.item_capsule);
+
 
         //Do Image secon
 
@@ -55,6 +66,7 @@ public class PlaceAdapter extends ArrayAdapter<Place>{
         tvRegion.setText(place.getRegion());
 
         //If the Tags are there for a given year they display if not they are gone
+        //TO GRADER SHOULD THE SET TEXT BELOW BE GET METHODS? GET METHODS THAT RETRIVE FINAL PRIVATE STATIC?
         if (place.isFreshman()){
             tvFresh.setVisibility(View.VISIBLE);
             tvFresh.setText("Freshman");
@@ -85,6 +97,17 @@ public class PlaceAdapter extends ArrayAdapter<Place>{
 
         //Now I am hooking up the star rating
         rating.setRating(place.getRating());
+
+        //Set the image view to the right image.
+        if (place.isImage()){
+            ivImage.setImageResource(place.getImage());
+        }
+
+        //set background
+        //TO GRADER - WHY IS CONTEXT COMPAT NEEDED? DOESN'T mCOLORID ALREADY HOLD THE COLOR ID?
+        //WHY IS ANYTHING ABOUT CONTEXT NEEDED?
+        int color = ContextCompat.getColor(getContext(), mColorID);
+        vBackground.setBackgroundColor(color);
 
         return listItemView;
     }

@@ -20,6 +20,18 @@
             android:name=".HousingActivity"
             android:label="Housing">
         </activity>
+        <activity
+            android:name=".EntertainmentActivity"
+            android:label="Entertainment">
+        </activity>
+        <activity
+            android:name=".DrinksActivity"
+            android:label="Drinks">
+        </activity>
+        <activity
+            android:name=".FoodActivity"
+            android:label="Food">
+        </activity>
     </application>
 
 </manifest>

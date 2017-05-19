@@ -10,7 +10,7 @@ public class Place {
     /**
      * Private Variables
      */
-    private String[] regions = {"highlands", "peabody", "alumni", "kissam", "24th"};
+    private String[] regions = {"highlands", "peabody", "alumni", "college quad", "24th", "sarratt"};
     private String mName;
     private String mRegion;
     private boolean mFresh;
@@ -115,6 +115,16 @@ public class Place {
     public String getRegion(){
         return mRegion;
     }
+
+    public int getImage(){
+        return mImageRef;
+    }
+
+
+    /**
+     * Check to see if various items exist
+     * @return
+     */
 
     public boolean isFreshman(){
         return mFresh;

@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Find the view for each category
         TextView housing = (TextView) findViewById(R.id.housing);
-        TextView drinks = (TextView) findViewById(R.id.drinks);
+        final TextView drinks = (TextView) findViewById(R.id.drinks);
         TextView ent = (TextView) findViewById(R.id.ent);
         TextView food = (TextView) findViewById(R.id.food);
 
@@ -24,6 +24,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent housingIntent = new Intent(MainActivity.this, HousingActivity.class);
                 startActivity(housingIntent);
+            }
+        });
+
+        ent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent entertainmentIntent = new Intent(MainActivity.this, EntertainmentActivity.class);
+                startActivity(entertainmentIntent);
+            }
+        });
+
+        drinks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent drinksIntent = new Intent(MainActivity.this, DrinksActivity.class);
+                startActivity(drinksIntent);
+            }
+        });
+
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent foodIntent = new Intent(MainActivity.this, FoodActivity.class);
+                startActivity(foodIntent);
             }
         });
     }
