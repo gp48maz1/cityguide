@@ -18,11 +18,11 @@ public class FoodActivity extends AppCompatActivity {
 
         ArrayList<Place> places = new ArrayList<>();
 
-        places.add(new Place("Commons", "peabody", true, false, false, false, 4.0f));
-        places.add(new Place("Rand", "sarratt", false, true, true, true, 3.0f));
-        places.add(new Place("Pub", "sarratt", true, true, true, true, 4.5f));
-        places.add(new Place("Quiznoes", "highlands", false, false, true, true, 2.5f));
-        places.add(new Place("Greens", "24th", false, true, true, true, 4.0f));
+        places.add(new Place(getString(R.string.f_commons), getString(R.string.p_peabody), true, false, false, false, 4.0f));
+        places.add(new Place(getString(R.string.f_rand), getString(R.string.p_sarratt), false, true, true, true, 3.0f));
+        places.add(new Place(getString(R.string.f_pub), getString(R.string.p_sarratt), true, true, true, true, 4.5f));
+        places.add(new Place(getString(R.string.f_quiznos), getString(R.string.p_high), false, false, true, true, 2.5f));
+        places.add(new Place(getString(R.string.f_greens), getString(R.string.p_24), false, true, true, true, 4.0f));
 
 
 

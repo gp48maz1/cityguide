@@ -11,6 +11,10 @@ public class Place {
      * Private Variables
      */
     private String[] regions = {"highlands", "peabody", "alumni", "college quad", "24th", "sarratt"};
+    private final static String mFreshman = "Freshman";
+    private final static String mSophomore = "Sophomore";
+    private final static String mJunior = "Junior";
+    private final static String mSenior = "Senior";
     private String mName;
     private String mRegion;
     private boolean mFresh;
@@ -27,14 +31,14 @@ public class Place {
     /**
      * Constructor
      */
-    public Place(String name, String region, boolean fresh, boolean soph, boolean junior, boolean senior, float rating){
+    public Place(String name, String region, boolean fresh, boolean soph, boolean junior, boolean senior, float rating) {
 
         this.mName = name;
 
-        if (Arrays.asList(regions).contains(region.trim().toLowerCase())){
+        if (Arrays.asList(regions).contains(region.trim().toLowerCase())) {
             this.mRegion = region;
         } else {
-            throw new IllegalArgumentException("Invalid Region: " +region+ ". Must be an actual region");
+            throw new IllegalArgumentException("Invalid Region: " + region + ". Must be an actual region");
         }
 
         this.mFresh = fresh;
@@ -48,14 +52,14 @@ public class Place {
     /**
      * Constructor
      */
-    public Place(String name, String region, boolean fresh, boolean soph, boolean junior, boolean senior, float rating, int imageRef){
+    public Place(String name, String region, boolean fresh, boolean soph, boolean junior, boolean senior, float rating, int imageRef) {
 
         this.mName = name;
 
-        if (Arrays.asList(regions).contains(region.trim().toLowerCase())){
+        if (Arrays.asList(regions).contains(region.trim().toLowerCase())) {
             this.mRegion = region;
         } else {
-            throw new IllegalArgumentException("Invalid Region: " +region+ ". Must be an actual region");
+            throw new IllegalArgumentException("Invalid Region: " + region + ". Must be an actual region");
         }
 
         this.mFresh = fresh;
@@ -71,82 +75,71 @@ public class Place {
 
     /**
      * Set Methods
+     *
      * @param name
      */
-    public void setName(String name){
+    public void setName(String name) {
         this.mName = name;
-    }
-
-    public void setRegion(String region) {
-        if (Arrays.asList(regions).contains(region.trim().toLowerCase())) {
-            this.mRegion = region;
-        } else {
-            throw new IllegalArgumentException("Invalid Region: " + region + ". Must be an actual region");
-        }
-    }
-
-    public void setFreshman(boolean fresh){
-        this.mFresh = fresh;
-    }
-
-    public void setSophomore(boolean soph){
-        this.mSoph = soph;
-    }
-
-    public void setJunior(boolean jr){
-        this.mJr = jr;
-    }
-
-    public void setSenior(boolean sr){
-        this.mSr = sr;
-    }
-
-    public void setRating(float rating){
-        this.mRating = rating;
     }
 
     /**
      * Getter / Is Methods
      */
-    public String getName(){
+    public String getName() {
         return mName;
     }
 
-    public String getRegion(){
+    public String getRegion() {
         return mRegion;
     }
 
-    public int getImage(){
+    public int getImage() {
         return mImageRef;
     }
 
+    public String geFreshman() {
+        return mFreshman;
+    }
+
+    public String getSophomore() {
+        return mSophomore;
+    }
+
+    public String getJunior() {
+        return mJunior;
+    }
+
+    public String getSenior() {
+        return mSenior;
+    }
 
     /**
      * Check to see if various items exist
+     *
      * @return
      */
 
-    public boolean isFreshman(){
+    public boolean isFreshman() {
         return mFresh;
     }
 
-    public boolean isSophomore(){
+    public boolean isSophomore() {
         return mSoph;
     }
 
-    public boolean isJunior(){
+    public boolean isJunior() {
         return mJr;
     }
 
-    public boolean isSenior(){
+    public boolean isSenior() {
         return mSr;
     }
 
-    public float getRating(){
+    public float getRating() {
         return mRating;
     }
 
-    public boolean isImage(){
+    public boolean isImage() {
         if (mImageRef == NO_IMAGE) {
             return false;
         } else {

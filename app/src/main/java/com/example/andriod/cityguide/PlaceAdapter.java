@@ -69,28 +69,28 @@ public class PlaceAdapter extends ArrayAdapter<Place>{
         //TO GRADER SHOULD THE SET TEXT BELOW BE GET METHODS? GET METHODS THAT RETRIVE FINAL PRIVATE STATIC?
         if (place.isFreshman()){
             tvFresh.setVisibility(View.VISIBLE);
-            tvFresh.setText("Freshman");
+            tvFresh.setText(place.geFreshman());
         } else {
             tvFresh.setVisibility(View.GONE);
         }
 
         if (place.isSophomore()){
             tvSoph.setVisibility(View.VISIBLE);
-            tvSoph.setText("Sophomore");
+            tvSoph.setText(place.getSophomore());
         } else {
             tvSoph.setVisibility(View.GONE);
         }
 
         if (place.isJunior()){
             tvJr.setVisibility(View.VISIBLE);
-            tvJr.setText("Junior");
+            tvJr.setText(place.getJunior());
         } else {
             tvJr.setVisibility(View.GONE);
         }
 
         if (place.isSenior()){
             tvSr.setVisibility(View.VISIBLE);
-            tvSr.setText("Senior");
+            tvSr.setText(place.getSenior());
         } else {
             tvSr.setVisibility(View.GONE);
         }

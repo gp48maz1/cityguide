@@ -19,12 +19,10 @@ public class DrinksActivity extends AppCompatActivity {
 
         ArrayList<Place> places = new ArrayList<>();
 
-        places.add(new Place("Frat House", "24th", true, true, false, false, 2.0f));
-        places.add(new Place("Patterson House", "peabody", false, false, false, true, 5.0f));
-        places.add(new Place("Pub", "sarratt", false, false, true, true, 4.5f));
-        places.add(new Place("chilis", "24th", false, true, true, true, 3.5f));
-
-
+        places.add(new Place(getString(R.string.f_frat), getString(R.string.p_24), true, true, false, false, 2.0f));
+        places.add(new Place(getString(R.string.f_ph), getString(R.string.p_peabody), false, false, false, true, 5.0f));
+        places.add(new Place(getString(R.string.f_pub), getString(R.string.p_sarratt), false, false, true, true, 4.5f));
+        places.add(new Place(getString(R.string.f_chili), getString(R.string.p_24), false, true, true, true, 3.5f));
 
 
         //This passes in the color id from color because this java script handles everything about the data, the adapter handles everything about the view

@@ -33,4 +33,31 @@
     <string name="t_suther">Sutherland House</string>
     <string name="t_west">West House</string>
 
+    <!-- Food-->
+    <string name="f_frat">Frat House</string>
+    <string name="f_gym">Vanderbilt Athletic Center</string>
+    <string name="f_mg">Memorial Gym</string>
+    <string name="f_alum">Alumni Lawn</string>
+    <string name="f_pub">Pub</string>
+    <string name="f_rand">Rand</string>
+    <string name="f_commons">Commons</string>
+    <string name="f_quiznos">Quiznos</string>
+    <string name="f_greens">Greens</string>
+    <string name="f_chili">Chillis</string>
+    <string name="f_ph">Patterson House</string>
+
+    <!-- Years -->
+    <string name="freshman">Freshman</string>
+    <string name="sophomore">Sophomore</string>
+    <string name="junior">Junior</string>
+    <string name="senior">Senior</string>
+
+    <!-- Places -->
+    <string name="p_24">24th</string>
+    <string name="p_high">Highlands</string>
+    <string name="p_alumni">Alumni</string>
+    <string name="p_sarratt">Sarratt</string>
+    <string name="p_peabody">Peabody</string>
+    <string name="p_cq">College Quad</string>
+
 </resources>
