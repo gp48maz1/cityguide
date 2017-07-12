@@ -10,11 +10,11 @@ public class Place {
     /**
      * Private Variables
      */
-    private String[] regions = {"highlands", "peabody", "alumni", "college quad", "24th", "sarratt"};
-    private final static String mFreshman = "Freshman";
-    private final static String mSophomore = "Sophomore";
-    private final static String mJunior = "Junior";
-    private final static String mSenior = "Senior";
+    private String[] regions = {String.valueOf(R.string.r_high), String.valueOf(R.string.r_peabody), String.valueOf(R.string.r_alumni), String.valueOf(R.string.r_cq), String.valueOf(R.string.r_24), String.valueOf(R.string.r_sarratt)};
+    //private final static String mFreshman = "Freshman";
+    //private final static String mSophomore = "Sophomore";
+    //private final static String mJunior = "Junior";
+    //private final static String mSenior = "Senior";
     private String mName;
     private String mRegion;
     private boolean mFresh;
@@ -37,8 +37,6 @@ public class Place {
 
         if (Arrays.asList(regions).contains(region.trim().toLowerCase())) {
             this.mRegion = region;
-        } else {
-            throw new IllegalArgumentException("Invalid Region: " + region + ". Must be an actual region");
         }
 
         this.mFresh = fresh;
@@ -58,8 +56,6 @@ public class Place {
 
         if (Arrays.asList(regions).contains(region.trim().toLowerCase())) {
             this.mRegion = region;
-        } else {
-            throw new IllegalArgumentException("Invalid Region: " + region + ". Must be an actual region");
         }
 
         this.mFresh = fresh;
@@ -97,21 +93,6 @@ public class Place {
         return mImageRef;
     }
 
-    public String geFreshman() {
-        return mFreshman;
-    }
-
-    public String getSophomore() {
-        return mSophomore;
-    }
-
-    public String getJunior() {
-        return mJunior;
-    }
-
-    public String getSenior() {
-        return mSenior;
-    }
 
     /**
      * Check to see if various items exist

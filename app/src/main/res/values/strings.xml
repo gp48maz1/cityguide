@@ -3,6 +3,9 @@
 
     <!-- 1st Filters -->
     <string name="fresh">Freshman</string>
+    <string name="soph">Sophomore</string>
+    <string name="jr">Junior</string>
+    <string name="sen">Senior</string>
     <string name="pre21">Sophmore and Junior</string>
     <string name="post21">Senior</string>
 
@@ -59,5 +62,13 @@
     <string name="p_sarratt">Sarratt</string>
     <string name="p_peabody">Peabody</string>
     <string name="p_cq">College Quad</string>
+
+    <!-- Regions -->
+    <string name="r_24">24th</string>
+    <string name="r_high">highlands</string>
+    <string name="r_alumni">alumni</string>
+    <string name="r_sarratt">sarratt</string>
+    <string name="r_peabody">peabody</string>
+    <string name="r_cq">college quad</string>
 
 </resources>
